@@ -121,6 +121,11 @@ By temporarily hiding `node_modules`, we ensure npm generates the lock file fres
 - It will exit with an error if `package-lock.json` generation fails
 - Your `node_modules` will be safely restored even if an error occurs
 - The script is idempotent - safe to run multiple times
+- For a brand-new clone, run a full `npm install` once before using the script so `node_modules` and `package-lock.json` start in sync
+- If you want this script only for local hygiene (e.g., working behind a firewall but publishing clean OSS), add these to your project `.gitignore` so they never reach source control:
+   - `npm-pre-push-clean.sh`
+   - `.last-lock-clean`
+   - `.node_modules_temp`
 
 ## 🛠️ Troubleshooting
 
