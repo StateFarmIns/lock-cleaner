@@ -52,7 +52,7 @@ fi
 
 # Step 3: Regenerate package-lock.json (without full install)
 echo "🔄 Regenerating package-lock.json with default registry paths..."
-npm install --package-lock-only
+npm_config_registry=https://registry.npmjs.org/ npm i --package-lock-only
 
 # Check if regeneration was successful
 if [ ! -f "package-lock.json" ]; then
