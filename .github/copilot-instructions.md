@@ -1,9 +1,9 @@
-# npm-lock-cleaner
+# lock-cleaner
 
 This is a simple shell script utility for Node.js projects. The project consists of a single bash script that cleans package-lock.json files before pushing to GitHub.
 
 ## Project Type
-- Bash script utility for Node.js projects
+- Bash script utility for Node.js projects (currently npm, extensible to yarn, pnpm, etc.)
 - No compilation or build process required
 - No external dependencies
 

@@ -1,4 +1,4 @@
-# npm-lock-cleaner
+# lock-cleaner
 
 A simple bash script to clean and regenerate `package-lock.json` with default npm registry paths before pushing to GitHub. This ensures your lock file doesn't contain custom registry paths or local configuration that may have been used during development.
 
@@ -33,7 +33,7 @@ The result is a clean `package-lock.json` with default registry paths, without a
 
 1. Download the script to your project root:
    ```bash
-   curl -O https://raw.githubusercontent.com/dafreitag/npm-lock-cleaner/main/pre-push-clean.sh
+   curl -O https://raw.githubusercontent.com/dafreitag/lock-cleaner/main/pre-push-clean.sh
    chmod +x pre-push-clean.sh
    ```
 
@@ -152,7 +152,7 @@ Apache License 2.0 - feel free to use this script in your projects.
 
 ## 🐛 Issues
 
-If you encounter any problems or have suggestions, please [open an issue](https://github.com/dafreitag/npm-lock-cleaner/issues).
+If you encounter any problems or have suggestions, please [open an issue](https://github.com/dafreitag/lock-cleaner/issues).
 
 ## 🙏 Acknowledgments
 
