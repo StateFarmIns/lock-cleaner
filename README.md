@@ -33,16 +33,16 @@ The result is a clean `package-lock.json` with default registry paths, without a
 
 1. Download the script to your project root:
    ```bash
-   curl -O https://raw.githubusercontent.com/dafreitag/lock-cleaner/main/pre-push-clean.sh
-   chmod +x pre-push-clean.sh
+   curl -O https://raw.githubusercontent.com/dafreitag/lock-cleaner/main/npm-pre-push-clean.sh
+   chmod +x npm-pre-push-clean.sh
    ```
 
 ### Option 2: Copy Manually
 
-1. Copy `pre-push-clean.sh` to your project root directory
+1. Copy `npm-pre-push-clean.sh` to your project root directory
 2. Make it executable:
    ```bash
-   chmod +x pre-push-clean.sh
+   chmod +x npm-pre-push-clean.sh
    ```
 
 ## 📖 Usage
@@ -52,7 +52,7 @@ The result is a clean `package-lock.json` with default registry paths, without a
 Run the script manually before pushing your code:
 
 ```bash
-./pre-push-clean.sh
+./npm-pre-push-clean.sh
 ```
 
 ### Add to package.json Scripts
@@ -62,8 +62,8 @@ Add it as an npm script for easy access:
 ```json
 {
   "scripts": {
-    "prepush": "./pre-push-clean.sh",
-    "clean-lock": "./pre-push-clean.sh"
+    "prepush": "./npm-pre-push-clean.sh",
+    "clean-lock": "./npm-pre-push-clean.sh"
   }
 }
 ```
@@ -81,7 +81,7 @@ Set it up as a Git pre-push hook to run automatically before every push:
 # Create the pre-push hook
 cat > .git/hooks/pre-push << 'EOF'
 #!/bin/bash
-./pre-push-clean.sh
+./npm-pre-push-clean.sh
 EOF
 
 # Make it executable
@@ -102,7 +102,7 @@ If your project uses [Husky](https://github.com/typicode/husky) for Git hooks:
 
 2. Add the pre-push hook:
    ```bash
-   npx husky add .git/hooks/pre-push "./pre-push-clean.sh"
+   npx husky add .git/hooks/pre-push "./npm-pre-push-clean.sh"
    ```
 
 ## 🔍 How It Works
@@ -127,7 +127,7 @@ By temporarily hiding `node_modules`, we ensure npm generates the lock file fres
 ### "Permission denied" error
 Make sure the script is executable:
 ```bash
-chmod +x pre-push-clean.sh
+chmod +x npm-pre-push-clean.sh
 ```
 
 ### Script doesn't run in Git hook
