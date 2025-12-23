@@ -33,7 +33,7 @@ The result is a clean `package-lock.json` with default registry paths, without a
 
 1. Download the script to your project root:
    ```bash
-   curl -O https://raw.githubusercontent.com/dafreitag/lock-cleaner/main/npm-pre-push-clean.sh
+   curl -O https://raw.githubusercontent.com/StateFarmIns/lock-cleaner/main/npm-pre-push-clean.sh
    chmod +x npm-pre-push-clean.sh
    ```
 
@@ -152,7 +152,7 @@ Apache License 2.0 - feel free to use this script in your projects.
 
 ## 🐛 Issues
 
-If you encounter any problems or have suggestions, please [open an issue](https://github.com/dafreitag/lock-cleaner/issues).
+If you encounter any problems or have suggestions, please [open an issue](https://github.com/StateFarmIns/lock-cleaner/issues).
 
 ## 🙏 Acknowledgments
 
