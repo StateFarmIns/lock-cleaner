@@ -57,9 +57,9 @@ Run the script manually before pushing your code:
 ./npm-pre-push-clean.sh
 ```
 
-### Add to package.json Scripts
+### Add to package.json Scripts (preferred)
 
-Add it as an npm script for easy access:
+Add it as an npm script for easy access and to ensure the script is run before every push:
 
 ```json
 {
