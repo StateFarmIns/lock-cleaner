@@ -97,21 +97,6 @@ chmod +x .git/hooks/pre-push
 
 Now the script will run automatically every time you `git push`.
 
-### Alternative: Using Husky
-
-If your project uses [Husky](https://github.com/typicode/husky) for Git hooks:
-
-1. Install Husky (if not already installed):
-   ```bash
-   npm install --save-dev husky
-   npx husky install
-   ```
-
-2. Add the pre-push hook:
-   ```bash
-   npx husky add .git/hooks/pre-push "./npm-pre-push-clean.sh"
-   ```
-
 ## 🔍 How It Works
 
 The script uses `npm install --package-lock-only`, which:
