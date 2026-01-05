@@ -31,19 +31,38 @@ The result is a clean `package-lock.json` with default registry paths, without a
 
 ## 🚀 Installation
 
-### Option 1: Download Directly
+### For Consuming Projects (Recommended)
+
+If you want to use this script in another project locally (without committing it to source control):
+
+1. After cloning your project, run this one-time setup:
+   ```bash
+   curl -s https://raw.githubusercontent.com/StateFarmIns/lock-cleaner/main/setup-npm-lock-cleaner.sh | bash
+   ```
+   
+   This will:
+   - Download `npm-pre-push-clean.sh`
+   - Create a git pre-push hook to run automatically
+   - Add necessary entries to `.gitignore` (so the script stays local)
+
+2. Run `npm install` to ensure packages and lock file start in sync:
+   ```bash
+   npm install
+   ```
+
+3. Commit the `.gitignore` changes (the script itself will be ignored):
+   ```bash
+   git add .gitignore
+   git commit -m "Add lock-cleaner to gitignore"
+   ```
+
+4. The script now runs automatically before every `git push`
+
+### Direct Download (For Development/Reference)
 
 1. Download the script to your project root:
    ```bash
    curl -O https://raw.githubusercontent.com/StateFarmIns/lock-cleaner/main/npm-pre-push-clean.sh
-   chmod +x npm-pre-push-clean.sh
-   ```
-
-### Option 2: Copy Manually
-
-1. Copy `npm-pre-push-clean.sh` to your project root directory
-2. Make it executable:
-   ```bash
    chmod +x npm-pre-push-clean.sh
    ```
 
