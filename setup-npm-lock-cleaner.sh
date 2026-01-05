@@ -58,6 +58,14 @@ if [ ! -f ".gitignore" ]; then
     fi
 fi
 
+# Add heading comment if not already present
+if ! grep -q "^# Lock cleaner" .gitignore; then
+    if ! echo "# Lock cleaner" >> .gitignore; then
+        echo "❌ Failed to update .gitignore with section header"
+        exit 1
+    fi
+fi
+
 # Add entries if they don't exist
 for entry in "npm-pre-push-clean.sh" ".last-lock-clean" ".node_modules_temp"; do
     if ! grep -q "^$entry$" .gitignore; then
