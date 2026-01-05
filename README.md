@@ -14,12 +14,14 @@ This script ensures your `package-lock.json` uses default npm registry paths bef
 
 ## ✨ What It Does
 
-1. **Removes** the existing `package-lock.json`
-2. **Temporarily hides** the `node_modules` directory (renames to `.node_modules_temp`)
-3. **Regenerates** `package-lock.json` using `npm install --package-lock-only` (no actual package installation)
-4. **Restores** the `node_modules` directory to its original state
+1. **Checks** if cleanup is needed (skips if `package-lock.json` hasn't changed since last run)
+2. **Removes** the existing `package-lock.json`
+3. **Temporarily hides** the `node_modules` directory (renames to `.node_modules_temp`)
+4. **Regenerates** `package-lock.json` using `npm install --package-lock-only` (no actual package installation)
+5. **Restores** the `node_modules` directory to its original state
+6. **Tracks** the cleanup with a marker file (`.last-lock-clean`) to avoid unnecessary reruns
 
-The result is a clean `package-lock.json` with default registry paths, without affecting your installed dependencies.
+The result is a clean `package-lock.json` with default registry paths, without affecting your installed dependencies. The script intelligently skips cleanup when no `npm install` has run since the last cleanup, keeping your workflow fast.
 
 ## 📋 Requirements
 
