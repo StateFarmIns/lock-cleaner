@@ -76,27 +76,13 @@ Run the script manually before pushing your code:
 ./npm-pre-push-clean.sh
 ```
 
-### Add to package.json Scripts (preferred)
+### Automated Git Hook (Already Set Up)
 
-Add it as an npm script for easy access and to ensure the script is run before every push:
+If you used the recommended setup script, the git pre-push hook is already installed and will run automatically before every `git push`. No additional configuration needed.
 
-```json
-{
-  "scripts": {
-    "prepush": "./npm-pre-push-clean.sh",
-    "clean-lock": "./npm-pre-push-clean.sh"
-  }
-}
-```
+### Automated Git Hook (Manual Setup)
 
-Then run:
-```bash
-npm run prepush
-```
-
-### Automated Git Hook (Recommended)
-
-Set it up as a Git pre-push hook to run automatically before every push:
+If you prefer to set it up manually:
 
 ```bash
 # Create the pre-push hook
