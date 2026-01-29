@@ -24,7 +24,6 @@ Before you request to submit a change, be sure an issue is created on the board 
     1. If you've changed interfaces, note that you have made a breaking change.
     2. Update any examples in the repository to reflect your changes.
     3. Update any documentation.
-    4. Make sure your code lints.
 4. Once you have finished making your changes, create a pull request (PR) back to the original repository
 5. Don't forget to link the PR to the original issue if you are solving one
 6. Enable the checkbox to [allow maintainer edits]([url](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork)) so the branch can be updated for a merge. Once you submit your PR, a maintainer will review your proposal. We may ask questions or request additional information.
