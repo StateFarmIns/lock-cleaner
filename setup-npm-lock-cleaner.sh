@@ -2,7 +2,7 @@
 
 # Post-clone setup script for lock-cleaner
 # Run this once after cloning a project to install the lock file cleaner hook
-# Usage: ./setup-lock-cleaner.sh
+# Usage: ./setup-npm-lock-cleaner.sh
 
 set -e
 
